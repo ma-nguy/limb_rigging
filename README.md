@@ -6,7 +6,7 @@ There is a main-file which consists functions that handle:
 - initial joint-chain generation
 - FK-IK-Blending
 - FK-IK-Control creation
-- Visbility switch
+- Visibility switch
 - Stretch-function
 - Twist-joint generation + spacing inside the stretch
 
