@@ -246,6 +246,7 @@ def add_ik_stretch(side, part, ik_chain, wrist_ctl, pv_ctl, primary_axis, twist_
         cmds.connectAttr(inv_node + '.output.outputX', ik_chain[1] + '.translate' + primary_axis)
         cmds.connectAttr(inv_node + '.output.outputY', ik_chain[2] + '.translate' + primary_axis)
 
+        #connect Twist-joints to stretch (right side)
         connector = ('x', 'y')
         for j, end in enumerate(connector):
             r = 0
@@ -272,6 +273,8 @@ def add_ik_stretch(side, part, ik_chain, wrist_ctl, pv_ctl, primary_axis, twist_
         cmds.connectAttr(nudge_pma + '.output2D.output2Dx', ik_chain[1] + '.translate' + primary_axis)
         cmds.connectAttr(nudge_pma + '.output2D.output2Dy', ik_chain[2] + '.translate' + primary_axis)
 
+
+        #connect Twist-joints to stretch (left side)
         connector = ('x', 'y')
         for j, end in enumerate(connector):
             r = 0
@@ -316,4 +319,5 @@ def distance_between(node_a, node_b):
 jntRig('l_clav', 'l', 'arm')
 jntRig('r_clav', 'r', 'arm')
 jntRig('l_leg', 'l', 'leg')
+
 jntRig('r_leg', 'r', 'leg')
