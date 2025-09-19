@@ -319,5 +319,5 @@ def distance_between(node_a, node_b):
 jntRig('l_clav', 'l', 'arm')
 jntRig('r_clav', 'r', 'arm')
 jntRig('l_leg', 'l', 'leg')
-
 jntRig('r_leg', 'r', 'leg')
+
